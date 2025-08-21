@@ -1,0 +1,59 @@
+@use '../index' as *;
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1;
+
+  &__primary {
+    background-color: $primary;
+    border: 1px solid $primary;
+    border-radius: $radius_small;
+    color: $white;
+    transform: scale(1);
+    transition: all .35s ease;
+
+    &:hover,
+    &:focus {
+      background-color: $primary_light_dark;
+      border: 1px solid $primary_light_dark;
+      transform: scale(1.15);
+      transition: all .35s ease;
+    }
+  }
+
+  &--small {
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+  }
+
+  &--medium {
+    width: 100%;
+    max-width: 175px;
+  }
+
+  &--large {
+    min-width: 120px;
+    width: 100%;
+  }
+
+  &__secondary {
+    background-color: $white;
+    border: 1px solid $gray_light;
+    color: $gray_dark;
+
+    &:hover,
+    &:focus,
+    &.active {
+      background-color: $primary_light;
+      border: 1px solid $primary;
+      color: $primary;
+    }
+  }
+}

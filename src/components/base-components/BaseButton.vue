@@ -1,16 +1,9 @@
 <script setup>
 
-const props = defineProps({
-  classList: {
-    type: String,
-    reqired: false
-  }
-})
-
 </script>
 
 <template>
-  <button :class="['btn', classList]">
+  <button>
     <slot></slot>
   </button>
 </template>

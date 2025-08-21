@@ -32,5 +32,9 @@ const menu = ref(MENU);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
+  margin-bottom: 20px;
+  &__item {
+    display: flex;
+  }
 }
 </style>

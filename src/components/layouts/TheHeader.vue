@@ -8,13 +8,13 @@ import { RouterLink } from 'vue-router';
   <header>
     <ul>
       <li>
-        <router-link to="/menu">Home</router-link>
+        <router-link to="/">Home</router-link>
       </li>
       <li>
         <router-link to="/menu">Menu</router-link>
       </li>
       <li>
-        <router-link to="/menu">Delivery</router-link>
+        <router-link to="/delivery">Delivery</router-link>
       </li>
     </ul>
   </header>

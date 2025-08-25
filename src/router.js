@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Home from '@/pages/Home.vue';
-import Menu from '@/pages/Menu.vue';
-import ProductItem from '@/pages/ProductItem.vue';
+import HomePage from '@/pages/Home.vue';
+import MenuPage from '@/pages/Menu.vue';
+import DeliveryPage from '@/pages/Delivery.vue';
+import ProductPage from '@/pages/Product.vue';
 import NotFound from '@/pages/NotFound.vue';
 
 const router = createRouter({
@@ -11,25 +12,28 @@ const router = createRouter({
     {
       path: '/',
       name: 'Home',
-      component: Home
-
+      component: HomePage
     },
     {
       path: '/menu',
       name: 'Menu',
-      component: Menu,
-      children: [
-        {
-          path: '/:id',
-          props: true,
-          component: ProductItem
-        }
-      ]
+      component: MenuPage,
     },
-    // {
-    //   path: '/:notFound(.*)',
-    //   component: NotFound
-    // }
+    {
+      path: '/menu/:id',
+      name: 'Product',
+      props: true,
+      component: ProductPage
+    },
+    {
+      path: '/delivery',
+      name: 'Delivery',
+      component: DeliveryPage
+    },
+    {
+      path: '/:notFound(.*)',
+      component: NotFound
+    }
   ]
 });
 

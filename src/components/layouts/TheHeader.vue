@@ -1,13 +1,21 @@
 <script setup>
+import { RouterLink } from 'vue-router';
+
 
 </script>
 
 <template>
   <header>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="/menu">Menu</a></li>
-      <li><a href="/delivery">Delivery</a></li>
+      <li>
+        <router-link to="/menu">Home</router-link>
+      </li>
+      <li>
+        <router-link to="/menu">Menu</router-link>
+      </li>
+      <li>
+        <router-link to="/menu">Delivery</router-link>
+      </li>
     </ul>
   </header>
 </template>

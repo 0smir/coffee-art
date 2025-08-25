@@ -2,12 +2,20 @@
 import RatingLabel from '@/components/RatingLabel.vue';
 import BaseButton from '@/components/base-components/BaseButton.vue';
 import NoImg from '@/components/base-components/NoImg.vue';
+import { computed } from 'vue';
+import { useRoute, RouterLink } from 'vue-router';
+
+const route = useRoute()
 
 const props = defineProps({
   product: {
     type: Object,
     required: true
   }
+})
+
+const itemUrl = computed(() => {
+  return route.fullPath + '/' + props.product.id; 
 })
 
 </script>
@@ -19,9 +27,10 @@ const props = defineProps({
       <NoImg v-else />
       <RatingLabel :rating="product.rating" :floated="true"/>
     </div>
-    
-    <h2 class="title">{{ product.title }}</h2>
-    <span class="subtitle">{{ product.base }}</span>
+      <h2 class="title">
+        <router-link :to="itemUrl">{{ product.title }}</router-link>
+      </h2>
+      <span class="subtitle">{{ product.base }}</span>
     <div class="product-item__details">
       <span class="price">${{ product.price }}</span>
       <BaseButton class="btn btn--small btn__primary btn__add" aria-label="add to cart">+</BaseButton>

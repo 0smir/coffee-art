@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import CoffeeItem from '@/components/CoffeeItem.vue';
+import ProductItem from '@/components/ProductItem.vue';
 import {MENU} from '@/appData.js';
 
 const menu = ref(MENU);
@@ -12,7 +12,7 @@ const menu = ref(MENU);
     <div class="container">
       <ul class="products-list">
         <li class="products-list__item" v-for="product in menu">
-          <CoffeeItem :key="product.id" :product="product" />
+          <ProductItem :key="product.id" :product="product" />
         </li>
       </ul>
     </div>

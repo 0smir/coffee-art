@@ -1,10 +1,11 @@
 @use '../index' as *;
 
-.btn {
+.btn,
+.btn-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6px 8px;
+  padding: 12px 15px;
   font-size: 16px;
   box-sizing: border-box;
   font-size: 16px;
@@ -56,4 +57,8 @@
       color: $primary;
     }
   }
+}
+
+.btn-link {
+  text-decoration: none;
 }

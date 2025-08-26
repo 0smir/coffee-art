@@ -1,7 +1,7 @@
 @use '../index' as *;
 
 body {
-  font-family: "Sora", "Arial", "Helvetica", sans-serif;
+  font-family: Sora, "Arial", "Helvetica", sans-serif;
   background-color: $white_shaded;
 }
 
@@ -22,4 +22,9 @@ ul {
   padding: 0 15px;
   margin: 0 auto;
   box-sizing: border-box;
+}
+
+.text {
+  margin-bottom: 10px;
+  color: rgba($white, .7);
 }

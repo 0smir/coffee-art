@@ -47,6 +47,7 @@
   &__secondary {
     background-color: $white;
     border: 1px solid $gray_light;
+    border-radius: $radius_small;
     color: $gray_dark;
 
     &:hover,

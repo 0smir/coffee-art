@@ -49,6 +49,7 @@ import { RouterLink } from 'vue-router';
     font-size: 18px;
     margin-bottom: 40px;
     font-weight: 100;
+    color: rgba($white, .7);
   }
 }
 .home__container {
